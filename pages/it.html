@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Technology Program – Ha Long University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="icon" href="img/UHL_CNTTnew.png" />
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header class="header">
+  <div class="logo">
+    <a href="index-en.html"> <img src="../img/cntt_uhl.png" alt="Logo" class="logo-img"> </a>
+  </div>
+  <div class="header-right">
+
+  <div class="date-box" id="currentDate"></div>
+  <script>
+function updateDateTime() {
+  const el = document.getElementById("currentDate");
+  const now = new Date();
+
+  const days = [
+    "Sunday", "Monday", "Tuesday",
+    "Wednesday", "Thursday", "Friday", "Saturday"
+  ];
+
+  const dayName = days[now.getDay()];
+
+  const pad = n => n.toString().padStart(2, "0");
+
+  const day = pad(now.getDate());
+  const month = pad(now.getMonth() + 1);
+  const year = now.getFullYear();
+
+  // 24 giờ
+  const hours = pad(now.getHours());
+  const minutes = pad(now.getMinutes());
+  const seconds = pad(now.getSeconds());
+
+  const timeStr = `${hours}:${minutes}:${seconds}`;
+
+  el.textContent = `${dayName}, ${day}/${month}/${year} - ${timeStr}`;
+}
+
+// chạy mỗi giây
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+  <!-- NGÔN NGỮ -->
+  <div class="lang-switch">
+    <a href="../index.html" class="active"> <img src="../img/vn.svg"> </a>
+    <a href="../pages/index-en.html"> <img src="../img/en.svg"></a>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="material-symbols-outlined">menu</span>
+  </div>
+
+</div>
+</header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="index-en.html"><span class="material-symbols-outlined">home</span> Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="aboutfinal.html"> About </a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a href="#"> Programs
+          <span class="material-symbols-outlined">expand_more</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="mastersprogram.html">Master’s Program</a></li>
+          <li><a href="uprogram.html">Undergraduate Program</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-lang">
+        <a href="../index.html"><img src="../img/vn.svg"></a>
+        <a href="../pages/index-en.html"><img src="../img/en.svg"></a>
+      <li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="scroll-content">
+      <h2 style="color: #4462a7;"> Information Technology Program at Ha Long University </h2> 
+
+      <p> The Information Technology (IT) program is currently considered one of the key training fields at universities, including Ha Long University. This field focuses on the use of computers and software to process, store, exchange, and transform data in various forms. </p>
+
+      <p> In the era of digital transformation and the Fourth Industrial Revolution, IT plays a crucial role in promoting the development of science, technology, and related fields. It is also a field with high demand for human resources, offering attractive job opportunities with competitive salaries. </p>
+
+      <p> <b> Admission subject combinations </b> </p>
+
+      <p> To study Information Technology, applicants can choose one of the following subject combinations: </p>
+
+      <p> 
+      <b> A00: </b> Mathematics, Physics, Chemistry <br>
+      <b> A00: </b> Mathematics - Physics - Chemistry <br>
+      <b> A01: </b> Mathematics - Physics - English <br>
+      <b> C01: </b> Literature - Mathematics - Physics <br>
+      <b> C02: </b> Literature - Mathematics - Chemistry <br>
+      <b> D01: </b> Literature - Mathematics - English <br>
+      <b> D07: </b> Mathematics - Chemistry - English <br>
+      <b> X02: </b> Mathematics - Literature - Informatics <br>
+      <b> X06: </b> Mathematics - Physics - Informatics 
+      </p>
+
+      <p> These combinations not only evaluate logical thinking and mathematical ability but also encourage the development of language skills, an important factor for international integration. </p>
+
+      <p> <b> Training orientation of the Information Technology program </b> </p>
+
+      <p> The IT training program at Ha Long University not only provides fundamental knowledge but also offers specialized orientations to help students meet real-world job market requirements after graduation. The curriculum is designed based on practical business needs, focusing on developing essential skills for potential career positions: </p>
+
+      <p> 
+      <b> Software and application development: </b> Training students to become programmers, software engineers, or mobile and web application developers. These are high-demand positions in the digital era. <br>
+
+      <b> System administration and cybersecurity: </b> Providing knowledge of system management and information security to work as cybersecurity specialists, system engineers, or network administrators in organizations. <br>
+
+      <b> Data analysis and artificial intelligence: </b> Guiding students to use technology to analyze big data and develop AI and Machine Learning-based solutions. These skills are essential to become data scientists or AI specialists. <br>
+
+      <b> Applying technology in business management: </b> Training students in technological solutions to support management, monitoring, and optimizing business processes effectively. <br>
+
+      The program also enables students to participate in internships at technology companies, helping them gain practical experience and be ready to work immediately after graduation. With a practice-oriented approach, IT students can confidently meet the demands of both domestic and international companies, from startups to large corporations. 
+      </p>
+
+      <p> <b> What does the Information Technology program teach? </b> </p>
+
+      <p> IT students will be equipped with knowledge and skills to meet the demanding requirements of the job market. The training includes: </p>
+
+      <p> 
+      <b> Fundamental knowledge: </b> Students learn how to repair, build, install, and maintain computer hardware. <br>
+
+      <b> Software development: </b> Researching, designing, and developing software applications for various fields. <br>
+
+      <b> Information security: </b> Providing essential skills to protect systems from increasingly complex threats. <br>
+
+      In addition, students are exposed to modern technologies and participate in real-world projects to enhance their practical skills, ensuring global competitiveness. 
+      </p>
+
+      <p> <b> Career opportunities </b> </p>
+
+      <p> After graduation, IT students can work in positions such as: </p>
+
+      <p> 
+      Software developer, mobile and web application developer. <br>
+      Data analyst and system developer. <br>
+      Cybersecurity specialist, ensuring information security for enterprises. <br>
+      Staff at technology centers or lecturers and researchers at universities and research institutes. <br>
+
+      With an average salary ranging from 10 to 30 million VND/month for fresh graduates, the IT field is a promising choice for those passionate about technology and innovation. 
+      </p>
+
+      <p> <b> Required qualities to study IT </b> </p>
+
+      <p> To succeed in IT, students should have the following qualities: </p>
+
+      <p> 
+      <b> Logical thinking and love for mathematics: </b> The foundation for programming and problem-solving. <br>
+      <b> Patience and attention to detail: </b> Essential for tasks requiring high accuracy. <br>
+      <b> Teamwork skills: </b> Important when working on real-world projects. <br>
+      <b> Lifelong learning mindset: </b> Technology constantly evolves, requiring continuous updates. <br>
+
+      The Information Technology program at Ha Long University is not only a place for learning but also a gateway to the future. With a well-structured curriculum, dedicated lecturers, and hands-on experience opportunities, it is an ideal choice for those who want to build a career in this promising field. 
+      </p>
+    </div>
+  </main>
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Cột 1: Logo -->
+    <div class="footer-col">
+      <!-- <img src="dhhl_footer.svg" alt="Đại học Hạ Long" class="footer-logo"> -->
+      <a href="index-en.html"> <img src="../img/logotrangtachnen.png" alt="cnttuhl" class="footer-logo"> </a>
+    </div>
+
+    <!-- Cột 2: Thông tin -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p> <img src="../img/vitri.png" width="20" height="20"> Faculty of Information Technology, Ha Long University, 258 Bach Dang Street, Vang Danh Ward, Quang Ninh Province, Vietnam</p>
+      <p> <img src="../img/dt.png" width="20" height="20"> 0985.863.555</p>
+      <p> <img src="../img/dtb.png" width="20" height="20"> 0968.231.085</p>
+      <p> <img src="../img/thu.png" width="20" height="20"> khoacntt.dhhl@moet.edu.vn</p>
+    </div>
+
+    <!-- Cột 3: Banner link -->
+<div class="footer-col">
+  <h3>Hyperlink</h3>
+
+  <a href="https://uhl.edu.vn/" class="footer-banner">
+    <img src="../img/banneren1.png" alt="uhl">
+  </a>
+
+  <a href="https://sv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/banneren2.png" alt="svuhl">
+  </a>
+
+  <a href="https://gv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/banneren3.png" alt="gvuhl">
+  </a>
+
+  <a href="https://uhlcntt.site/" class="footer-banner">
+    <img src="../img/banneren4.png" alt="cnttsite">
+  </a>
+</div>
+
+<!-- Cột 4: Fanpage -->
+<div class="footer-col fanpage">
+  <h3>Fanpage</h3>
+
+  <!-- Facebook Page Plugin -->
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhoacnttdhhl&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@khoacnttuhl" data-unique-id="khoacnttuhl" data-embed-type="creator" style="width: 340px; height: 150px;" > <section> <a target="_blank" href="https://www.tiktok.com/@khoacnttuhl?refer=creator_embed">@khoacnttuhl</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+</div>
+  </div>
+
+  <!-- Dòng bản quyền -->
+  <div class="footer-bottom">
+    <b> © 2026 Faculty of Information Technology - Ha Long University. All rights reserved.</b>
+  </div>
+</footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
