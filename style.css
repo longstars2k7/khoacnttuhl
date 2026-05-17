@@ -443,12 +443,20 @@ mark {
   }
   .nav-list {
     flex-direction: column;
+    padding: 10px;
+    gap: 6px;
+  }
+  .nav-item > a {
+    width: 100%;
+    padding: 12px 14px;
+    justify-content: flex-start;
   }
   .dropdown-menu {
     position: static;
     box-shadow: none;
     border-radius: 12px; /* 👈 sửa lại */
     overflow: hidden;    /* 👈 để bo góc đẹp hơn */
+    width: 100%;
   }
   .nav-item.dropdown:hover .dropdown-menu {
     display: none;
