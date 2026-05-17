@@ -47,7 +47,7 @@ td {
   padding: 0 20px;
 }
 .logo-img {
-  height: clamp(52px, 8vw, 70px);
+  height: clamp(58px, 8vw, 70px);
   width: auto;
   object-fit: contain;
 }
