@@ -3,187 +3,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảo trì hệ thống</title>
+  <title>Khoa Công nghệ thông tin - Trường Đại học Hạ Long</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .login-box {
-      background-color: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 600px;
-    }
-
-    h2 {
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus {
-      border-color: #1e88e5;
-    }
-
-    .form-group .error {
-      color: red;
-      font-size: 13px;
-      margin-top: 5px;
-      display: none;
-    }
-
-    .form-group input.invalid {
-      border-color: red;
-    }
-
-    .captcha-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #e3f2fd;
-      border-radius: 6px;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      color: #1976d2;
-      user-select: none;
-    }
-
-    #refresh-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #1976d2;
-      font-size: 20px;
-      padding: 0;
-    }
-
-    .login-btn {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      background-color: #1e88e5;
-      color: white;
-      font-weight: bold;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .login-btn:hover {
-      background-color: #1565c0;
-    }
-
-    #toast {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: #f44336;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 8px;
-      display: none;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-    }
-    .logo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 10px auto 20px auto;
-}
-@media (max-width: 768px) {
-  .login-box {
-    padding: 20px;
-    margin: 10px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-}
-
-  </style>
+  <link rel="icon" href="img/UHL_CNTTnew.png" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/05/29/13/20260529135930-LUOUUP1A.js" defer></script> 
 </head>
 <body>
-  <div class="login-box">
-    <img src="img/cntt_uhl.png" alt="Logo" class="logo">
-    <h2 style="color:#4462a7">THÔNG BÁO</h2>
-    <div class="form-group">
-      <h3> Hệ thống đang được bảo trì. <br>
-      Vui lòng thử lại sau. </h3>
-    </div>
+
+  <!-- Header -->
+<header class="header">
+  <div class="logo">
+    <a href="index.html"> <img src="img/cntt_uhl.png" alt="Logo" class="logo-img"> </a>
   </div>
-</body>
+  <div class="header-right">
 
-<script>
-  let time = 10;
-  const el = document.getElementById("time");
+  <div class="date-box" id="currentDate"></div>
+  <script>
+function updateDateTime() {
+  const el = document.getElementById("currentDate");
+  const now = new Date();
 
-  const timer = setInterval(() => {
-    time--;
-    el.textContent = time;
+  const days = [
+    "Chủ nhật", "Thứ hai", "Thứ ba",
+    "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
+  ];
 
-    if (time <= 0) {
-      clearInterval(timer);
-      window.location.href = "index.html";
-    }
-  }, 1000);
+  const dayName = days[now.getDay()];
+
+  const pad = n => n.toString().padStart(2, "0");
+
+  const day = pad(now.getDate());
+  const month = pad(now.getMonth() + 1);
+  const year = now.getFullYear();
+
+  // 24 giờ
+  const hours = pad(now.getHours());
+  const minutes = pad(now.getMinutes());
+  const seconds = pad(now.getSeconds());
+
+  const timeStr = `${hours}:${minutes}:${seconds}`;
+
+  el.textContent = `${dayName}, ${day}/${month}/${year} - ${timeStr}`;
+}
+
+// chạy mỗi giây
+updateDateTime();
+setInterval(updateDateTime, 1000);
 </script>
 
+  <!-- NGÔN NGỮ -->
+  <div class="lang-switch">
+    <a href="index.html" class="active"> <img src="img/vn.svg"> </a>
+    <a href="pages/index-en.html"> <img src="img/en.svg"></a>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="material-symbols-outlined">menu</span>
+  </div>
+
+</div>
+</header>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li class="nav-item active">
+        <a href="index.html"><span class="material-symbols-outlined">home</span> Trang chủ</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/gioithieufinal.html"> Giới thiệu </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#"> Đào tạo
+          <span class="material-symbols-outlined">expand_more</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/daotaoth.s.html">Thạc sĩ</a></li>
+          <li><a href="pages/daotaodhcq.html">Đại học chính quy</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="pages/ttuc-skien.html">Tin tức - Sự kiện</a>
+      </li>
+      <li class="nav-item">
+          <a href="pages/vban-bmau.html">Văn bản - Biểu mẫu</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/hnghiep.html">Hướng nghiệp</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/ngcuukh.html">Nghiên cứu khoa học</a>
+      </li>
+
+      <li class="nav-lang">
+        <a href="pages/index.html"><img src="img/vn.svg"></a>
+        <a href="pages/index-en.html"><img src="img/en.svg"></a>
+      </li>
+    </ul>
+  </nav>
+
+    <section class="noidung">
+    <div class="slideshow-container">
+      <!--<div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="slideshowimg/136namcthcm.png" style="width:100%">
+      </div>-->
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="slideshowimg/cntt.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="slideshowimg/cntt260127.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="slideshowimg/dhhl.jpg" style="width:100%">
+      </div>
+
+      <div class="dots">
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+      <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+      </script> 
+
+  <!-- Nội dung -->
+    <main class="content">
+    <div class="scroll-content">
+      <h2 style="color: #4462a7;"> KHOA CÔNG NGHỆ THÔNG TIN </h2> 
+        <h3> Phó trưởng khoa: ThS. LÊ MẠNH HÀ </h3>
+        <!--<h3> Phó trưởng khoa: </h3>-->
+        <p class="p" style="color: red;"> <b> ĐÀO TẠO TRÌNH ĐỘ ĐẠI HỌC CÁC NGÀNH: </b> Khoa học máy tính, Công nghệ thông tin, Thiết kế đồ họa, Sư phạm Tin học; và trình độ thạc sĩ ngành: Khoa học máy tính. </p>
+        <p class="p"> Có nhiều sinh viên đạt giải nghiên cứu khoa học các cấp. Hàng năm, phối hợp Tỉnh Đoàn, Sở Giáo dục và Đào tạo tổ chức thành công Hội thi Tin học trẻ tỉnh Quảng Ninh, phối hợp với Đại học Bách Khoa tổ chức thi Đánh giá tư duy TSA. </p>
+        <p class="p"> Đạt danh hiệu Tập thể lao động xuất sắc năm 2022; nhiều cá nhân được nhận Bằng khen của Bộ Giáo dục và Đào tạo, UBND tỉnh Quảng Ninh, Đoàn TNCS Hồ Chí Minh tỉnh Quảng Ninh và Trung ương Đoàn TNCS Hồ Chí Minh. </p>
+
+        <!-- MEDIA -->
+        <div class="media-wrapper">
+          <div class="media-box ratio-16-9">
+            <img src="img/Page45_10UHL.png">
+          </div>
+
+          <div class="media-box ratio-16-9">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F833419726457188%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div>
+    </div>
+  </main>
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Cột 1: Logo -->
+    <div class="footer-col">
+      <!-- <img src="dhhl_footer.svg" alt="Đại học Hạ Long" class="footer-logo"> -->
+      <a href="index.html"> <img src="img/logotrangtachnen.png" alt="cnttuhl" class="footer-logo"> </a>
+    </div>
+
+    <!-- Cột 2: Thông tin -->
+    <div class="footer-col">
+      <h3>Liên hệ </h3>
+      <p> <img src="img/vitri.png" width="20" height="20"> Khoa Công nghệ thông tin, Trường Đại học Hạ Long, 258 Bạch Đằng, phường Vàng Danh, tỉnh Quảng Ninh</p>
+      <p> <img src="img/dt.png" width="20" height="20"> 0985.863.555</p>
+      <p> <img src="img/dtb.png" width="20" height="20"> 0912.380.050</p>
+      <p> <img src="img/thu.png" width="20" height="20"> khoacntt.dhhl@moet.edu.vn</p>
+    </div>
+
+    <!-- Cột 3: Banner link -->
+<div class="footer-col">
+  <h3>Liên kết</h3>
+
+  <a href="https://uhl.edu.vn/" class="footer-banner">
+    <img src="img/bannernew1.png" alt="uhl">
+  </a>
+
+  <a href="https://sv.uhl.edu.vn/" class="footer-banner">
+    <img src="img/bannernew2.png" alt="svuhl">
+  </a>
+
+  <a href="https://gv.uhl.edu.vn/" class="footer-banner">
+    <img src="img/bannernew3.png" alt="gvuhl">
+  </a>
+
+  <a href="https://uhlcntt.site/" class="footer-banner">
+    <img src="img/bannernew4.png" alt="cnttsite">
+  </a>
+</div>
+
+<!-- Cột 4: Fanpage -->
+<div class="footer-col fanpage">
+  <h3>Fanpage</h3>
+
+  <!-- Facebook Page Plugin -->
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhoacnttdhhl&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@khoacnttuhl" data-unique-id="khoacnttuhl" data-embed-type="creator" style="width: 340px; height: 150px;" > <section> <a target="_blank" href="https://www.tiktok.com/@khoacnttuhl?refer=creator_embed">@khoacnttuhl</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+</div>
+  </div>
+
+  <!-- Dòng bản quyền -->
+  <div class="footer-bottom">
+    <b> © 2026 Bản quyền thuộc về Khoa Công nghệ thông tin - Trường Đại học Hạ Long. </b>
+    <p> </p>
+    <b> *Website được phát triển bởi nhóm sinh viên Khoa Công nghệ thông tin - Lớp DH11TT03A. </b>
+    <div class="member-list">
+      <div class="member">
+        <a href="https://www.facebook.com/longstars2k7"> <img src="img/longpn.jpg"> </a>
+        <p class="name"> Phùng Ngọc Long </p>
+      </div>
+
+      <div class="member">
+        <a href="https://www.facebook.com/nthp.hihi"> <img src="img/phuongnth.jpg"> </a>
+        <p class="name"> Nguyễn Thị Hoàng Phương </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+  </script>
+
+</body>
 </html>
