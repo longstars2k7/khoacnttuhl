@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Đăng nhập</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: #1e88e5;
+    }
+
+    .form-group input.invalid {
+      border-color: red;
+    }
+
+    .error {
+      display: none;
+      margin-top: 5px;
+      color: red;
+      font-size: 13px;
+    }
+
+    .captcha-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #e3f2fd;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #captcha-img {
+      height: 55px;
+      border-radius: 4px;
+    }
+
+    #refresh-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #1976d2;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #1e88e5;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      background: #1565c0;
+    }
+
+    #toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      color: white;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <img src="../img/cntt_uhl.png" alt="Logo" class="logo">
+
+    <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
+
+    <div class="form-group">
+      <label for="username">
+        Tên đăng nhập <span style="color:red">(*)</span>
+      </label>
+
+      <input type="text" id="username">
+
+      <div class="error" id="username-error">
+        Vui lòng nhập tên đăng nhập.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">
+        Mật khẩu <span style="color:red">(*)</span>
+      </label>
+
+      <input type="password" id="password">
+
+      <div class="error" id="password-error">
+        Vui lòng nhập mật khẩu.
+      </div>
+    </div>
+
+    <div class="form-group">
+
+      <label for="captcha-input">
+        Mã xác nhận <span style="color:red">(*)</span>
+      </label>
+
+      <div class="captcha-container">
+
+        <img id="captcha-img" src="" alt="Captcha">
+
+        <button id="refresh-btn" type="button">
+          <span class="material-symbols-outlined">refresh</span>
+        </button>
+
+      </div>
+
+      <input type="text" id="captcha-input">
+
+      <div class="error" id="captcha-error">
+        Vui lòng nhập mã xác nhận.
+      </div>
+
+    </div>
+
+    <button class="login-btn" onclick="login()">
+      Đăng nhập
+    </button>
+
+  </div>
+
+  <div id="toast">
+    <span class="material-symbols-outlined">error</span>
+    <span id="toast-msg"></span>
+  </div>
+    <script src="login_new.js"></script>
+</body>
+</html>
