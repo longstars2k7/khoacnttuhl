@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Văn bản - Biểu mẫu Phòng Đào tạo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="icon" href="img/UHL_CNTTnew.png" />
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/05/29/13/20260529135930-LUOUUP1A.js" defer></script> 
+</head>
+<body>
+
+  <!-- Header -->
+<header class="header">
+  <div class="logo">
+    <a href="../index.html"> <img src="../img/cntt_uhl.png" alt="Logo" class="logo-img"> </a>
+  </div>
+  <div class="header-right">
+
+  <div class="date-box" id="currentDate"></div>
+  <script>
+function updateDateTime() {
+  const el = document.getElementById("currentDate");
+  const now = new Date();
+
+  const days = [
+    "Chủ nhật", "Thứ hai", "Thứ ba",
+    "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
+  ];
+
+  const dayName = days[now.getDay()];
+
+  const pad = n => n.toString().padStart(2, "0");
+
+  const day = pad(now.getDate());
+  const month = pad(now.getMonth() + 1);
+  const year = now.getFullYear();
+
+  // 24 giờ
+  const hours = pad(now.getHours());
+  const minutes = pad(now.getMinutes());
+  const seconds = pad(now.getSeconds());
+
+  const timeStr = `${hours}:${minutes}:${seconds}`;
+
+  el.textContent = `${dayName}, ${day}/${month}/${year} - ${timeStr}`;
+}
+
+// chạy mỗi giây
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+  <!-- NGÔN NGỮ -->
+  <div class="lang-switch">
+    <a href="../index.html" class="active"> <img src="../img/vn.svg"> </a>
+    <a href="../pages/index-en.html"> <img src="../img/en.svg"></a>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="material-symbols-outlined">menu</span>
+  </div>
+
+</div>
+</header>
+
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="../index.html"><span class="material-symbols-outlined">home</span> Trang chủ</a>
+      </li>
+      <li class="nav-item">
+        <a href="gioithieufinal.html"> Giới thiệu </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#"> Đào tạo
+          <span class="material-symbols-outlined">expand_more</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="daotaoth.s.html">Thạc sĩ</a></li>
+          <li><a href="daotaodhcq.html">Đại học chính quy</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="ttuc-skien.html">Tin tức - Sự kiện</a>
+      </li>
+      <li class="nav-item active">
+          <a href="vban-bmau.html">Văn bản - Biểu mẫu</a>
+      </li>
+      <li class="nav-item">
+        <a href="hnghiep.html">Hướng nghiệp</a>
+      </li>
+      <li class="nav-item">
+        <a href="ngcuukh.html">Nghiên cứu khoa học</a>
+      </li>
+      <li class="nav-lang">
+        <a href="../index.html"><img src="../img/vn.svg"></a>
+        <a href="../pages/index-en.html"><img src="../img/en.svg"></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="scroll-content">
+      <h2 style="color: #4462a7;"> Văn bản - Biểu mẫu Phòng Đào tạo <br>
+      (Các biểu mẫu văn bản dành cho sinh viên) </h2> 
+      <p> <i> <span style="color: red; font-weight: bold;">*Sinh viên khi làm các thủ tục có liên quan, cần tải các biểu mẫu và điền đủ các thông tin, xin xác nhận và nộp cho phòng Đào tạo. Đề nghị xem kĩ hướng dẫn quy trình thực hiện các thủ tục dưới đây. </i> </span> </p>
+      <table border="1">
+        <tr>
+          <td style="text-align: center;"> <b> TT </b> </td>
+          <td style="text-align: center;"> <b> Mẫu văn bản </b> </td>
+          <td style="text-align: center;"> <b> Ghi chú </b> </td>
+        </tr> 
+        <tr>
+          <td> 1 </td>
+          <td> <a href="https://docs.google.com/document/d/1ThJ4VeZNTYyGboTgiiyxmeT75DwSBEag/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin bảo lưu và nghỉ học tạm thời </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 2 </td>
+          <td> <a href="https://docs.google.com/document/d/1uEbYfgStJjhU34Cn2IvMzE26CQGo8fib/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin học lại, học cải thiện </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 3 </td>
+          <td> <a href="https://docs.google.com/document/d/1nX8hcPvCrXLWW3S_63t6qVLUfBPKwPTZ/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin tiếp tục học tập sau bảo lưu </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 4 </td>
+          <td> <a href="https://docs.google.com/document/d/1VSUJCiNBG45ecjVGtWvfWVlGosoPCHDX/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin chuyển ngành đào tạo </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 5 </td>
+          <td> <a href="https://drive.google.com/open?id=1IaCmL-PSbhiuzSUnd0rWdShOfNvIB5Py" class="a"> Đơn đề nghị miễn học và chuyển điểm học phần </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 6 </td>
+          <td> <a href="https://docs.google.com/document/d/1P1oxJHo72V9fdAUl6WVvGW3ZFTff6Kic/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin chuyển trường </a> </td>
+          <td> Dùng cho sinh viên trường khác muốn chuyển về ĐHHL. </td>
+        </tr>
+        <tr>
+          <td> 7 </td>
+          <td> <a href="https://docs.google.com/document/d/1lyUg7JlM0CYkMh8VPtvLNvrf5h90AFCQ/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn đề nghị cấp lại bảng điểm, văn bằng, chứng chỉ </a> </td>
+          <td> Dùng cho cựu sinh viên, cựu học viên. </td>
+        </tr>
+        <tr>
+          <td> 8 </td>
+          <td> <a href="https://docs.google.com/document/d/1p8M54yMU5vePOrw1VUwGhcIcFDFBwgRX/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn đề nghị xác minh </a> </td>
+          <td> Dùng cho cựu sinh viên, cựu học viên. </td>
+        </tr>
+        <tr>
+          <td> 9 </td>
+          <td> <a href="https://docs.google.com/document/d/1n3uquXuLr6GBKI0BwABSaIIHCtKqF21H/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin cấp giấy chứng nhận hoàn thành Chương trình Đào tạo </a> </td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <td> 10 </td>
+          <td> <a href="https://docs.google.com/document/d/1lyUg7JlM0CYkMh8VPtvLNvrf5h90AFCQ/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin cấp lại Văn bằng, Bảng điểm </a> </td>
+          <td> Dùng cho sinh viên, cựu sinh viên, cựu học viên. </td>
+        </tr>
+        <tr>
+          <td> 11 </td>
+          <td> <a href="https://docs.google.com/document/d/1XzArHZgW0vp9yk6iapCFjzs-mWZprhuB/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin xét tốt nghiệp </a> </td>
+          <td> Dùng cho các sinh viên tốt nghiệp sớm hoặc chậm so với kế hoạch đào tạo chung. </td>
+        </tr>
+        <tr>
+          <td> 12 </td>
+          <td> <a href="https://docs.google.com/document/d/1Ud8VbwahXGJpPypRVM16cSkZSrOvHlKa/edit?usp=sharing&ouid=117554042698175912969&rtpof=true&sd=true" class="a"> Đơn xin hoãn xét tốt nghiệp </a>  </td>
+          <td>  </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Cột 1: Logo -->
+    <div class="footer-col">
+      <!-- <img src="dhhl_footer.svg" alt="Đại học Hạ Long" class="footer-logo"> -->
+      <a href="../index.html"> <img src="../img/logotrangtachnen.png" alt="cnttuhl" class="footer-logo"> </a>
+    </div>
+
+    <!-- Cột 2: Thông tin -->
+    <div class="footer-col">
+      <h3>Liên hệ </h3>
+      <p> <img src="../img/vitri.png" width="20" height="20"> Khoa Công nghệ thông tin, Trường Đại học Hạ Long, 258 Bạch Đằng, phường Vàng Danh, tỉnh Quảng Ninh</p>
+      <p> <img src="../img/dt.png" width="20" height="20"> 0985.863.555</p>
+      <p> <img src="../img/dtb.png" width="20" height="20"> 0968.231.085</p>
+      <p> <img src="../img/thu.png" width="20" height="20"> khoacntt.dhhl@moet.edu.vn</p>
+    </div>
+
+    <!-- Cột 3: Banner link -->
+<div class="footer-col">
+  <h3>Liên kết</h3>
+
+  <a href="https://uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew1.png" alt="uhl">
+  </a>
+
+  <a href="https://sv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew2.png" alt="svuhl">
+  </a>
+
+  <a href="https://gv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew3.png" alt="gvuhl">
+  </a>
+
+  <a href="https://uhlcntt.site/" class="footer-banner">
+    <img src="../img/bannernew4.png" alt="cnttsite">
+  </a>
+</div>
+
+<!-- Cột 4: Fanpage -->
+<div class="footer-col fanpage">
+  <h3>Fanpage</h3>
+
+  <!-- Facebook Page Plugin -->
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhoacnttdhhl&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@khoacnttuhl" data-unique-id="khoacnttuhl" data-embed-type="creator" style="width: 340px; height: 150px;" > <section> <a target="_blank" href="https://www.tiktok.com/@khoacnttuhl?refer=creator_embed">@khoacnttuhl</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+</div>
+  </div>
+
+  <!-- Dòng bản quyền -->
+  <div class="footer-bottom">
+    <b> © 2026 Bản quyền thuộc về Khoa Công nghệ thông tin - Trường Đại học Hạ Long. </b>
+    <p> </p>
+    <b> *Website được phát triển bởi nhóm sinh viên Khoa Công nghệ thông tin - Lớp DH11TT03A. </b>
+    <div class="member-list">
+      <div class="member">
+        <a href="https://www.facebook.com/longstars2k7"> <img src="../img/longpn.jpg"> </a>
+        <p class="name"> Phùng Ngọc Long </p>
+      </div>
+
+      <div class="member">
+        <a href="https://www.facebook.com/nthp.hihi"> <img src="../img/phuongnth.jpg"> </a>
+        <p class="name"> Nguyễn Thị Hoàng Phương </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>

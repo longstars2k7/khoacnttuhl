@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> <img src="../img/vn.png" width="20" height="20"> <img src="../img/vn.png" width="20" height="20"> <img src="../img/vn.png" width="20" height="20"> Kỷ niệm 136 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2026) </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="icon" href="../img/UHL_CNTTnew.png" />
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/05/29/13/20260529135930-LUOUUP1A.js" defer></script> 
+</head>
+<body>
+
+  <!-- Header -->
+<header class="header">
+  <div class="logo">
+    <a href="../index.html"> <img src="../img/cntt_uhl.png" alt="Logo" class="logo-img"> </a>
+  </div>
+  <div class="header-right">
+
+  <div class="date-box" id="currentDate"></div>
+  <script>
+function updateDateTime() {
+  const el = document.getElementById("currentDate");
+  const now = new Date();
+
+  const days = [
+    "Chủ nhật", "Thứ hai", "Thứ ba",
+    "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
+  ];
+
+  const dayName = days[now.getDay()];
+
+  const pad = n => n.toString().padStart(2, "0");
+
+  const day = pad(now.getDate());
+  const month = pad(now.getMonth() + 1);
+  const year = now.getFullYear();
+
+  // 24 giờ
+  const hours = pad(now.getHours());
+  const minutes = pad(now.getMinutes());
+  const seconds = pad(now.getSeconds());
+
+  const timeStr = `${hours}:${minutes}:${seconds}`;
+
+  el.textContent = `${dayName}, ${day}/${month}/${year} - ${timeStr}`;
+}
+
+// chạy mỗi giây
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+  <!-- NGÔN NGỮ -->
+  <div class="lang-switch">
+    <a href="../index.html" class="active"> <img src="../img/vn.svg"> </a>
+    <a href="../pages/index-en.html"> <img src="../img/en.svg"></a>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="material-symbols-outlined">menu</span>
+  </div>
+
+</div>
+</header>
+
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="../index.html"><span class="material-symbols-outlined">home</span> Trang chủ</a>
+      </li>
+      <li class="nav-item">
+        <a href="gioithieufinal.html"> Giới thiệu </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#"> Đào tạo
+          <span class="material-symbols-outlined">expand_more</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="daotaoth.s.html">Thạc sĩ</a></li>
+          <li><a href="daotaodhcq.html">Đại học chính quy</a></li>
+        </ul>
+      </li>
+      <li class="nav-item active">
+        <a href="ttuc-skien.html">Tin tức - Sự kiện</a>
+      </li>
+      <li class="nav-item">
+          <a href="vban-bmau.html">Văn bản - Biểu mẫu</a>
+      </li>
+      <li class="nav-item">
+        <a href="hnghiep.html">Hướng nghiệp</a>
+      </li>
+      <li class="nav-item">
+        <a href="ngcuukh.html">Nghiên cứu khoa học</a>
+      </li>
+      <li class="nav-lang">
+        <a href="../index.html"><img src="../img/vn.svg"></a>
+        <a href="../pages/index-en.html"><img src="../img/en.svg"></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="scroll-content">
+      <h2 style="color: #4462a7;"> <img src="../img/vn.png" width="20" height="20"> <img src="../img/vn.png" width="20" height="20"> <img src="../img/vn.png" width="20" height="20"> Kỷ niệm 136 năm Ngày sinh Chủ tịch Hồ Chí Minh (19/5/1890 - 19/5/2026) </h2> 
+      <p> Chủ tịch Hồ Chí Minh đã cống hiến trọn đời mình cho sự nghiệp cách mạng của Đảng ta, dân tộc ta, Nhân dân ta và vì hòa bình, tiến bộ xã hội trên thế giới. Người đã trải qua một cuộc đời oanh liệt, đầy gian khổ hy sinh, vô cùng cao thượng và phong phú, vô cùng trong sáng và đẹp đẽ. Cuộc đời và sự nghiệp cách mạng vĩ đại của Chủ tịch Hồ Chí Minh mãi là tấm gương sáng ngời cho lớp lớp thế hệ người Việt Nam học tập và noi theo. </p>
+      <p> Tên tuổi và sự nghiệp của Chủ tịch Hồ Chí Minh sẽ còn mãi với non sông đất nước, sống mãi trong lòng mỗi chúng ta. </p>
+      <p> Nguồn: Tuổi trẻ trường Đại học Hạ Long </p>
+      <img src="../img/cthcm.jpg" alt = "cthcm" class="post-img" width="440" height="auto">
+    </div>
+  </main>
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Cột 1: Logo -->
+    <div class="footer-col">
+      <!-- <img src="dhhl_footer.svg" alt="Đại học Hạ Long" class="footer-logo"> -->
+      <a href="../index.html"> <img src="../img/logotrangtachnen.png" alt="cnttuhl" class="footer-logo"> </a>
+    </div>
+
+    <!-- Cột 2: Thông tin -->
+    <div class="footer-col">
+      <h3>Liên hệ </h3>
+      <p> <img src="../img/vitri.png" width="20" height="20"> Khoa Công nghệ thông tin, Trường Đại học Hạ Long, 258 Bạch Đằng, phường Vàng Danh, tỉnh Quảng Ninh</p>
+      <p> <img src="../img/dt.png" width="20" height="20"> 0985.863.555</p>
+      <p> <img src="../img/dtb.png" width="20" height="20"> 0968.231.085</p>
+      <p> <img src="../img/thu.png" width="20" height="20"> khoacntt.dhhl@moet.edu.vn</p>
+    </div>
+
+    <!-- Cột 3: Banner link -->
+<div class="footer-col">
+  <h3>Liên kết</h3>
+
+  <a href="https://uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew1.png" alt="uhl">
+  </a>
+
+  <a href="https://sv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew2.png" alt="svuhl">
+  </a>
+
+  <a href="https://gv.uhl.edu.vn/" class="footer-banner">
+    <img src="../img/bannernew3.png" alt="gvuhl">
+  </a>
+
+  <a href="https://uhlcntt.site/" class="footer-banner">
+    <img src="../img/bannernew4.png" alt="cnttsite">
+  </a>
+</div>
+
+<!-- Cột 4: Fanpage -->
+<div class="footer-col fanpage">
+  <h3>Fanpage</h3>
+
+  <!-- Facebook Page Plugin -->
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhoacnttdhhl&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@khoacnttuhl" data-unique-id="khoacnttuhl" data-embed-type="creator" style="width: 340px; height: 150px;" > <section> <a target="_blank" href="https://www.tiktok.com/@khoacnttuhl?refer=creator_embed">@khoacnttuhl</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+</div>
+  </div>
+
+  <!-- Dòng bản quyền -->
+  <div class="footer-bottom">
+    <b> © 2026 Bản quyền thuộc về Khoa Công nghệ thông tin - Trường Đại học Hạ Long. </b>
+    <p> </p>
+    <b> *Website được phát triển bởi nhóm sinh viên Khoa Công nghệ thông tin - Lớp DH11TT03A. </b>
+    <div class="member-list">
+      <div class="member">
+        <a href="https://www.facebook.com/longstars2k7"> <img src="../img/longpn.jpg"> </a>
+        <p class="name"> Phùng Ngọc Long </p>
+      </div>
+
+      <div class="member">
+        <a href="https://www.facebook.com/nthp.hihi"> <img src="../img/phuongnth.jpg"> </a>
+        <p class="name"> Nguyễn Thị Hoàng Phương </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    toggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
